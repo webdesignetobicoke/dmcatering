@@ -67,7 +67,7 @@ export default function HorsDoeuvresPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
           <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 items-start">
             <div>
-              <h1 className="font-display leading-none mb-6" style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: '#1a1a1a' }}>
+              <h1 className="font-display leading-none mb-6 text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]" style={{ color: '#1a1a1a' }}>
                 HORS<br />
                 <span style={{ color: 'var(--gold)' }}>D'OEUVRES.</span>
               </h1>
@@ -262,7 +262,7 @@ export default function HorsDoeuvresPage() {
       {/* CTA */}
       <div style={{ background: '#1a1a1a' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 text-center">
-          <h2 className="font-display leading-none mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', color: '#ffffff' }}>
+          <h2 className="font-display leading-none mb-6 text-[clamp(3rem,8vw,5rem)] sm:text-[clamp(2.5rem,6vw,5rem)]" style={{ color: '#ffffff' }}>
             READY TO BUILD YOUR<br />
             <span style={{ color: 'var(--gold)' }}>HORS D'OEUVRES?</span>
           </h2>

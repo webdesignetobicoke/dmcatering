@@ -151,8 +151,8 @@ export default function FilmTV({
         <div className="mb-16 grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2
-              className="font-display leading-none"
-              style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: 'var(--cream)' }}
+              className="font-display leading-none text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]"
+              style={{ color: 'var(--cream)' }}
             >
               ON SET.<br />ON TIME.<br />
               <span style={{ color: 'var(--gold)' }}>ON POINT.</span>
@@ -225,7 +225,12 @@ export default function FilmTV({
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
             <div>
-              <h3 className="font-display leading-none" style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: 'var(--cream)' }}>OUR<br /><span style={{ color: 'var(--gold)' }}>FLEET.</span></h3>
+              <h3
+                className="font-display leading-none text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]"
+                style={{ color: 'var(--cream)' }}
+              >
+                OUR<br /><span style={{ color: 'var(--gold)' }}>FLEET.</span>
+              </h3>
             </div>
             <div>
               <p className="font-serif text-lg" style={{ color: 'var(--cream-dim)', lineHeight: 1.7 }}>

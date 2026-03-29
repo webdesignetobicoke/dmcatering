@@ -170,7 +170,7 @@ export default function Navbar() {
             l.dropdown ? (
               <li key={l.label}>
                 <button
-                  className="font-display text-sm tracking-[0.2em] uppercase flex items-center gap-2 w-full text-left"
+                  className="font-display text-base tracking-[0.2em] uppercase flex items-center gap-2 w-full text-left"
                   style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--cream-dim)', padding: 0 }}
                   onClick={() => setMobileOpenLabel(mobileOpenLabel === l.label ? null : l.label)}
                 >
@@ -180,12 +180,15 @@ export default function Navbar() {
                   </svg>
                 </button>
                 {mobileOpenLabel === l.label && (
-                  <ul className="mt-3 pl-4 flex flex-col gap-4" style={{ borderLeft: '2px solid var(--gold)' }}>
+                  <ul
+                    className="mt-3 flex flex-col gap-4"
+                    style={{ borderLeft: '2px solid var(--gold)', background: '#f5f5f5', padding: '0.75rem 1rem', borderRadius: '8px' }}
+                  >
                     {l.dropdown.map(sub => (
                       <li key={sub.href}>
                         <Link
                           href={sub.href}
-                          className="font-display text-xs tracking-[0.2em] uppercase block"
+                          className="font-display text-sm tracking-[0.2em] uppercase block"
                           style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
                           onClick={() => { setOpen(false); setMobileOpenLabel(null) }}
                         >
@@ -200,7 +203,7 @@ export default function Navbar() {
               <li key={l.label}>
                 <Link
                   href={l.href}
-                  className="font-display text-sm tracking-[0.2em] uppercase"
+                  className="font-display text-base tracking-[0.2em] uppercase"
                   style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
                   onClick={() => setOpen(false)}
                 >
@@ -212,7 +215,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/contact"
-              className="font-display text-xs tracking-[0.25em] uppercase inline-block px-6 py-3"
+              className="font-display text-sm tracking-[0.25em] uppercase inline-block px-6 py-3"
               style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
               onClick={() => setOpen(false)}
             >

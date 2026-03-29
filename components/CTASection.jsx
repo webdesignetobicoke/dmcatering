@@ -4,7 +4,10 @@ export default function CTASection({ line1 = 'READY TO PLAN', line2 = 'YOUR EVEN
   return (
     <div style={{ background: '#1a1a1a' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 text-center">
-        <h2 className="font-display leading-none mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', color: '#ffffff' }}>
+        <h2
+          className="font-display leading-none mb-6 text-[clamp(3rem,8vw,5rem)] sm:text-[clamp(2.5rem,6vw,5rem)]"
+          style={{ color: '#ffffff' }}
+        >
           {line1}<br />
           <span style={{ color: 'var(--gold)' }}>{line2}</span>
         </h2>

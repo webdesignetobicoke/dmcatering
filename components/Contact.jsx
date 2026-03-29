@@ -9,8 +9,8 @@ export default function Contact() {
           {/* Left: info */}
           <div>
             <h2
-              className="font-display leading-none mb-10"
-              style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', color: 'var(--cream)' }}
+              className="font-display leading-none mb-10 text-[clamp(3.6rem,9vw,6rem)] sm:text-[clamp(3rem,7vw,6rem)]"
+              style={{ color: 'var(--cream)' }}
             >
               LET'S<br />
               <span style={{ color: 'var(--gold)' }}>TALK.</span>

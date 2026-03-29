@@ -23,8 +23,8 @@ export default function ContactPage() {
             {/* Left — info */}
             <div>
               <h1
-                className="font-display leading-none mb-10"
-                style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: 'var(--cream)' }}
+                className="font-display leading-none mb-10 text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]"
+                style={{ color: 'var(--cream)' }}
               >
                 LET'S<br />
                 <span style={{ color: 'var(--gold)' }}>TALK.</span>

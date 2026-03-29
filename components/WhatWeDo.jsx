@@ -64,7 +64,7 @@ export default function WhatWeDo() {
                 <div className="mt-6">
                   <a
                     href={s.href}
-                    className="font-display text-sm tracking-[0.2em] block text-center py-4"
+                    className="font-display text-base sm:text-sm tracking-[0.2em] block text-center py-4"
                     style={{
                       background: hovered === i ? '#333333' : 'var(--cream)',
                       color: '#ffffff',

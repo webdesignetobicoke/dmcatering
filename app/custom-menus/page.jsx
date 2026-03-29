@@ -47,7 +47,7 @@ export default function CustomMenusPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h1 className="font-display leading-none mb-6" style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: '#1a1a1a' }}>
+              <h1 className="font-display leading-none mb-6 text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]" style={{ color: '#1a1a1a' }}>
                 CUSTOM<br />
                 <span style={{ color: 'var(--gold)' }}>MENUS.</span>
               </h1>
@@ -117,7 +117,7 @@ export default function CustomMenusPage() {
                   <div className="mt-6 flex flex-col gap-3">
                     <a
                       href={s.href}
-                      className="font-display text-sm tracking-[0.2em] block text-center py-4"
+                      className="font-display text-base sm:text-sm tracking-[0.2em] block text-center py-4"
                       style={{
                         background: hovered === i ? '#333333' : 'var(--cream)',
                         color: '#ffffff',
@@ -132,7 +132,7 @@ export default function CustomMenusPage() {
                       href={s.menu}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-display text-sm tracking-[0.2em] text-center"
+                      className="font-display text-base sm:text-sm tracking-[0.2em] text-center"
                       style={{ color: 'var(--gold)', textDecoration: 'none' }}
                       onMouseEnter={e => e.currentTarget.style.color = 'var(--gold-dim)'}
                       onMouseLeave={e => e.currentTarget.style.color = 'var(--gold)'}
@@ -150,7 +150,7 @@ export default function CustomMenusPage() {
       {/* How it works */}
       <section style={{ background: '#ffffff', borderTop: '1px solid rgba(130,167,55,0.15)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
-          <h2 className="font-display leading-none mb-16" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', color: 'var(--cream)' }}>
+          <h2 className="font-display leading-none mb-16 text-[clamp(3rem,7vw,4.5rem)] sm:text-[clamp(2.5rem,5vw,4.5rem)]" style={{ color: 'var(--cream)' }}>
             HOW IT<br /><span style={{ color: 'var(--gold)' }}>WORKS.</span>
           </h2>
           <div className="grid md:grid-cols-4 gap-0">
@@ -172,7 +172,7 @@ export default function CustomMenusPage() {
       {/* CTA */}
       <div style={{ background: '#1a1a1a' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 text-center">
-          <h2 className="font-display leading-none mb-6" style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', color: '#ffffff' }}>
+          <h2 className="font-display leading-none mb-6 text-[clamp(3rem,8vw,5rem)] sm:text-[clamp(2.5rem,6vw,5rem)]" style={{ color: '#ffffff' }}>
             READY TO BUILD<br />
             <span style={{ color: 'var(--gold)' }}>YOUR MENU?</span>
           </h2>

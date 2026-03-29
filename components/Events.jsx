@@ -37,8 +37,8 @@ export default function Events() {
         <div className="mb-20 grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2
-              className="font-display leading-none"
-              style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: 'var(--cream)' }}
+              className="font-display leading-none text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]"
+              style={{ color: 'var(--cream)' }}
             >
               YOUR EVENT.<br />
               <span style={{ color: 'var(--gold)' }}>YOUR WAY.</span>
@@ -80,7 +80,7 @@ export default function Events() {
                 <div className="mt-6">
                   <Link
                     href={s.href}
-                    className="font-display text-base tracking-[0.2em] block text-center py-4"
+                    className="font-display text-lg sm:text-base tracking-[0.2em] block text-center py-4"
                     style={{ background: 'var(--cream)', color: '#ffffff', textDecoration: 'none' }}
                     onMouseEnter={e => e.currentTarget.style.background = '#333333'}
                     onMouseLeave={e => e.currentTarget.style.background = 'var(--cream)'}

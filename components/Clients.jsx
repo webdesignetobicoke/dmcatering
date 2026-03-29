@@ -28,8 +28,8 @@ export default function Clients() {
 
         <div className="mb-16">
           <h2
-            className="font-display leading-none"
-            style={{ fontSize: 'clamp(3.5rem, 8vw, 7rem)', color: 'var(--cream)' }}
+            className="font-display leading-none text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]"
+            style={{ color: 'var(--cream)' }}
           >
             TRUSTED BY<br />
             <span style={{ color: 'var(--gold)' }}>THE BEST.</span>

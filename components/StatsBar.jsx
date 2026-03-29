@@ -27,7 +27,10 @@ export default function StatsBar() {
               >
                 {item.label.toUpperCase()}
               </p>
-              <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 'clamp(0.65rem, 1.5vw, 1rem)', lineHeight: 1.7 }}>
+              <p
+                className="text-[clamp(0.9rem,2.4vw,1rem)] sm:text-[clamp(0.65rem,1.5vw,1rem)]"
+                style={{ color: '#ffffff', lineHeight: 1.7 }}
+              >
                 {item.desc}
               </p>
             </div>

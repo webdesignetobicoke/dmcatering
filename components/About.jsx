@@ -41,8 +41,8 @@ export default function About({
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <h2
-                className="font-display leading-none mb-4"
-                style={{ fontSize: 'clamp(3rem, 7vw, 6rem)', color: 'var(--cream)' }}
+                className="font-display leading-none mb-4 text-[clamp(3.6rem,9vw,6rem)] sm:text-[clamp(3rem,7vw,6rem)]"
+                style={{ color: 'var(--cream)' }}
               >
                 30 YEARS OF<br />
                 <span style={{ color: 'var(--gold)' }}>CRAFTSMANSHIP.</span>
