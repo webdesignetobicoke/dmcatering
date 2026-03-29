@@ -271,7 +271,7 @@ export default function HorsDoeuvresPage() {
           </p>
           <Link
             href="/contact"
-            className="font-display text-lg tracking-[0.25em] uppercase px-14 py-4 inline-block"
+            className="font-display text-lg tracking-[0.25em] uppercase block w-full text-center py-4 sm:inline-block sm:w-auto sm:px-14"
             style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
             onMouseEnter={e => e.currentTarget.style.background = 'var(--gold-dim)'}
             onMouseLeave={e => e.currentTarget.style.background = 'var(--gold)'}
