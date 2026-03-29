@@ -1,5 +1,3 @@
-'use client'
-import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 
 const links = [
@@ -26,76 +24,14 @@ const links = [
   { label: 'Clients', href: '/clients' },
 ]
 
-function DropdownItem({ item }) {
-  const [open, setOpen] = useState(false)
-  const ref = useRef(null)
-
-  useEffect(() => {
-    function handleClick(e) {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
-    }
-    document.addEventListener('mousedown', handleClick)
-    return () => document.removeEventListener('mousedown', handleClick)
-  }, [])
-
-  return (
-    <li ref={ref} className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-        <Link
-          href={item.href}
-          className="font-display text-xl tracking-[0.15em] uppercase flex items-center gap-1"
-          style={{ color: '#ffffff', textDecoration: 'none' }}
-          onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
-          onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
-        >
-        {item.label}
-        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ marginLeft: '2px', marginTop: '2px', flexShrink: 0 }}>
-          <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </Link>
-
-      {open && (
-        <ul
-          className="absolute top-full left-0 py-2 min-w-[200px]"
-          style={{ background: '#ffffff', boxShadow: '0 8px 32px rgba(0,0,0,0.1)', border: '1px solid rgba(130,167,55,0.15)', zIndex: 100 }}
-        >
-          {item.dropdown.map(sub => (
-            <li key={sub.href}>
-              <Link
-                href={sub.href}
-                className="font-display text-base tracking-[0.15em] uppercase block px-6 py-4"
-                style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
-                onMouseEnter={e => { e.currentTarget.style.color = 'var(--gold)'; e.currentTarget.style.background = 'rgba(130,167,55,0.05)' }}
-                onMouseLeave={e => { e.currentTarget.style.color = 'var(--cream-dim)'; e.currentTarget.style.background = 'transparent' }}
-                onClick={() => setOpen(false)}
-              >
-                {sub.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </li>
-  )
-}
-
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen] = useState(false)
-  const [mobileOpenLabel, setMobileOpenLabel] = useState(null)
-
-  useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', handler)
-    return () => window.removeEventListener('scroll', handler)
-  }, [])
-
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50"
       style={{
         background: '#0f0f0f',
         borderBottom: '1px solid rgba(255,255,255,0.08)',
-        boxShadow: scrolled ? '0 2px 24px rgba(0,0,0,0.07)' : 'none',
+        boxShadow: '0 2px 24px rgba(0,0,0,0.07)',
       }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between" style={{ height: '120px' }}>
@@ -114,15 +50,40 @@ export default function Navbar() {
         <ul className="hidden lg:flex items-center gap-10">
           {links.map(l =>
             l.dropdown ? (
-              <DropdownItem key={l.label} item={l} />
+              <li key={l.label} className="relative group">
+                <Link
+                  href={l.href}
+                  className="font-display text-xl tracking-[0.15em] uppercase flex items-center gap-1"
+                  style={{ color: '#ffffff', textDecoration: 'none' }}
+                >
+                  {l.label}
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ marginLeft: '2px', marginTop: '2px', flexShrink: 0 }}>
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </Link>
+                <ul
+                  className="absolute top-full left-0 py-2 min-w-[200px] hidden group-hover:block"
+                  style={{ background: '#ffffff', boxShadow: '0 8px 32px rgba(0,0,0,0.1)', border: '1px solid rgba(130,167,55,0.15)', zIndex: 100 }}
+                >
+                  {l.dropdown.map(sub => (
+                    <li key={sub.href}>
+                      <Link
+                        href={sub.href}
+                        className="font-display text-base tracking-[0.15em] uppercase block px-6 py-4"
+                        style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
+                      >
+                        {sub.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
             ) : (
               <li key={l.label}>
                 <Link
                   href={l.href}
                   className="font-display text-xl tracking-[0.15em] uppercase"
                   style={{ color: '#ffffff', textDecoration: 'none' }}
-                  onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
-                  onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
                 >
                   {l.label}
                 </Link>
@@ -143,87 +104,68 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile hamburger */}
-        <button
-          className="lg:hidden flex flex-col justify-center gap-1.5 p-2"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-          style={{ background: 'none', border: 'none', cursor: 'pointer' }}
-        >
-          <span className="block w-6 h-0.5" style={{ background: open ? 'var(--gold)' : 'var(--gold)', transform: open ? 'rotate(45deg) translate(0px, 6px)' : '' }} />
-          <span className="block w-6 h-0.5" style={{ background: open ? 'transparent' : 'var(--gold)', opacity: open ? 0 : 1 }} />
-          <span className="block w-6 h-0.5" style={{ background: open ? 'var(--gold)' : 'var(--gold)', transform: open ? 'rotate(-45deg) translate(0px, -6px)' : '' }} />
-        </button>
-      </div>
-
-      {/* Mobile drawer */}
-      <div
-        className="lg:hidden overflow-hidden"
-        style={{
-          maxHeight: open ? '600px' : '0',
-          background: '#f5f5f5',
-          borderTop: open ? '1px solid rgba(130,167,55,0.15)' : 'none',
-          boxShadow: open ? '0 8px 24px rgba(0,0,0,0.06)' : 'none',
-          transition: 'max-height 0.3s ease',
-        }}
-      >
-        <ul className="px-8 py-8 flex flex-col gap-6">
-          {links.map(l =>
-            l.dropdown ? (
-              <li key={l.label}>
-                <button
-                  className="font-display text-lg tracking-[0.2em] uppercase flex items-center gap-2 w-full text-left"
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--cream-dim)', padding: 0 }}
-                  onClick={() => setMobileOpenLabel(mobileOpenLabel === l.label ? null : l.label)}
-                >
-                  {l.label}
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ transform: mobileOpenLabel === l.label ? 'rotate(180deg)' : '', transition: 'transform 0.2s' }}>
-                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
-                {mobileOpenLabel === l.label && (
-                  <ul
-                    className="mt-3 flex flex-col gap-4"
-                    style={{ borderLeft: '2px solid var(--gold)', padding: '0.75rem 1rem' }}
-                  >
-                    {l.dropdown.map(sub => (
-                      <li key={sub.href}>
-                        <Link
-                          href={sub.href}
-                          className="font-display text-base tracking-[0.2em] uppercase block"
-                          style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
-                          onClick={() => { setOpen(false); setMobileOpenLabel(null) }}
-                        >
-                          {sub.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ) : (
-              <li key={l.label}>
+        <details className="lg:hidden">
+          <summary className="list-none cursor-pointer flex flex-col justify-center gap-1.5 p-2">
+            <span className="block w-6 h-0.5" style={{ background: 'var(--gold)' }} />
+            <span className="block w-6 h-0.5" style={{ background: 'var(--gold)' }} />
+            <span className="block w-6 h-0.5" style={{ background: 'var(--gold)' }} />
+          </summary>
+          <div
+            className="absolute right-0 left-0 mt-2"
+            style={{
+              background: '#f5f5f5',
+              borderTop: '1px solid rgba(130,167,55,0.15)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.06)',
+              zIndex: 50,
+            }}
+          >
+            <ul className="px-8 py-8 flex flex-col gap-6">
+              {links.map(l =>
+                l.dropdown ? (
+                  <li key={l.label}>
+                    <details>
+                      <summary className="font-display text-lg tracking-[0.2em] uppercase cursor-pointer">
+                        {l.label}
+                      </summary>
+                      <ul className="mt-3 flex flex-col gap-4" style={{ borderLeft: '2px solid var(--gold)', padding: '0.75rem 1rem' }}>
+                        {l.dropdown.map(sub => (
+                          <li key={sub.href}>
+                            <Link
+                              href={sub.href}
+                              className="font-display text-base tracking-[0.2em] uppercase block"
+                              style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
+                            >
+                              {sub.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  </li>
+                ) : (
+                  <li key={l.label}>
+                    <Link
+                      href={l.href}
+                      className="font-display text-lg tracking-[0.2em] uppercase"
+                      style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                )
+              )}
+              <li>
                 <Link
-                  href={l.href}
-                  className="font-display text-lg tracking-[0.2em] uppercase"
-                  style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
-                  onClick={() => setOpen(false)}
+                  href="/contact"
+                  className="font-display text-base tracking-[0.25em] uppercase block w-full text-center py-4"
+                  style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
                 >
-                  {l.label}
+                  Book Now
                 </Link>
               </li>
-            )
-          )}
-          <li>
-            <Link
-              href="/contact"
-              className="font-display text-base tracking-[0.25em] uppercase block w-full text-center py-4"
-              style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
-              onClick={() => setOpen(false)}
-            >
-              Book Now
-            </Link>
-          </li>
-        </ul>
+            </ul>
+          </div>
+        </details>
       </div>
     </nav>
   )
