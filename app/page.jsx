@@ -137,16 +137,16 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-3 gap-6">
             {services.map(card => (
-              <div key={card.title} style={{ border: '1px solid rgba(130,167,55,0.2)', background: '#ffffff' }}>
+              <div key={card.title} className="flex flex-col" style={{ border: '1px solid rgba(130,167,55,0.2)', background: '#ffffff' }}>
                 <div style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
                   <img src={card.img} alt={card.title} className="w-full h-full" style={{ objectFit: 'cover' }} />
                 </div>
-                <div className="p-7">
+                <div className="p-7 flex flex-col flex-1">
                   <h3 className="font-display text-3xl mb-3" style={{ color: 'var(--cream)' }}>{card.title}</h3>
-                  <p style={{ color: 'var(--cream-dim)', lineHeight: 1.7 }}>{card.desc}</p>
+                  <p style={{ color: 'var(--cream-dim)', lineHeight: 1.7, marginBottom: '2.5rem' }}>{card.desc}</p>
                   <a
                     href={card.href}
-                    className="font-display text-base tracking-[0.2em] uppercase block text-center py-4 mt-6"
+                    className="font-display text-base tracking-[0.2em] uppercase block text-center py-4 mt-auto"
                     style={{ background: 'var(--cream)', color: '#ffffff', textDecoration: 'none' }}
                   >
                     {card.cta} →
