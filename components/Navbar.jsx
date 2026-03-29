@@ -159,7 +159,7 @@ export default function Navbar() {
         className="lg:hidden overflow-hidden"
         style={{
           maxHeight: open ? '600px' : '0',
-          background: '#ffffff',
+          background: '#f5f5f5',
           borderTop: open ? '1px solid rgba(130,167,55,0.15)' : 'none',
           boxShadow: open ? '0 8px 24px rgba(0,0,0,0.06)' : 'none',
           transition: 'max-height 0.3s ease',
@@ -182,7 +182,7 @@ export default function Navbar() {
                 {mobileOpenLabel === l.label && (
                   <ul
                     className="mt-3 flex flex-col gap-4"
-                    style={{ borderLeft: '2px solid var(--gold)', background: '#f5f5f5', padding: '0.75rem 1rem', borderRadius: '8px' }}
+                    style={{ borderLeft: '2px solid var(--gold)', padding: '0.75rem 1rem' }}
                   >
                     {l.dropdown.map(sub => (
                       <li key={sub.href}>
