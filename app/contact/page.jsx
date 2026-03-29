@@ -32,11 +32,11 @@ export default function ContactPage() {
 
               <div className="space-y-8">
                 <div style={{ borderLeft: '2px solid var(--gold)', paddingLeft: '1.5rem' }}>
-                  <p className="font-display text-xs tracking-[0.3em] mb-3" style={{ color: 'var(--gold)' }}>FILM & TELEVISION INQUIRIES</p>
-                  <p className="font-display text-xl mb-1" style={{ color: 'var(--cream)' }}>David Mintz</p>
+                  <p className="font-display text-sm tracking-[0.3em] mb-3" style={{ color: 'var(--gold)' }}>FILM & TELEVISION INQUIRIES</p>
+                  <p className="font-display text-2xl mb-1" style={{ color: 'var(--cream)' }}>David Mintz</p>
                   <a
                     href="mailto:david@dmcatering.ca"
-                    className="block font-serif text-lg"
+                    className="block font-serif text-xl"
                     style={{ color: 'var(--cream-dim)' }}
                     onMouseEnter={e => e.target.style.color = 'var(--gold)'}
                     onMouseLeave={e => e.target.style.color = 'var(--cream-dim)'}
@@ -45,7 +45,7 @@ export default function ContactPage() {
                   </a>
                   <a
                     href="tel:6478373348"
-                    className="block font-serif text-lg mt-1"
+                    className="block font-serif text-xl mt-1"
                     style={{ color: 'var(--cream-dim)' }}
                     onMouseEnter={e => e.target.style.color = 'var(--gold)'}
                     onMouseLeave={e => e.target.style.color = 'var(--cream-dim)'}
@@ -55,10 +55,10 @@ export default function ContactPage() {
                 </div>
 
                 <div style={{ borderLeft: '2px solid var(--gold)', paddingLeft: '1.5rem' }}>
-                  <p className="font-display text-xs tracking-[0.3em] mb-3" style={{ color: 'var(--gold)' }}>SOCIAL & CORPORATE EVENTS</p>
+                  <p className="font-display text-sm tracking-[0.3em] mb-3" style={{ color: 'var(--gold)' }}>SOCIAL & CORPORATE EVENTS</p>
                   <a
                     href="mailto:david@dmcatering.ca"
-                    className="block font-serif text-lg"
+                    className="block font-serif text-xl"
                     style={{ color: 'var(--cream-dim)' }}
                     onMouseEnter={e => e.target.style.color = 'var(--gold)'}
                     onMouseLeave={e => e.target.style.color = 'var(--cream-dim)'}
@@ -68,8 +68,8 @@ export default function ContactPage() {
                 </div>
 
                 <div style={{ borderLeft: '2px solid rgba(130,167,55,0.3)', paddingLeft: '1.5rem' }}>
-                  <p className="font-display text-xs tracking-[0.3em] mb-3" style={{ color: 'var(--cream-dim)' }}>MAILING ADDRESS</p>
-                  <p className="font-serif" style={{ color: 'var(--cream-dim)', lineHeight: 1.8 }}>
+                  <p className="font-display text-sm tracking-[0.3em] mb-3" style={{ color: 'var(--cream-dim)' }}>MAILING ADDRESS</p>
+                  <p className="font-serif text-lg" style={{ color: 'var(--cream-dim)', lineHeight: 1.8 }}>
                     225 Commissioners Street<br />
                     Toronto, ON · M4M 0A1
                   </p>
