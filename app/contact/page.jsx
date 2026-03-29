@@ -80,7 +80,7 @@ export default function ContactPage() {
                     href="https://www.facebook.com/David-Mintz-Catering-486119858172281/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-display text-xs tracking-[0.25em]"
+                    className="font-display text-sm tracking-[0.25em]"
                     style={{ color: 'var(--cream-dim)' }}
                     onMouseEnter={e => e.target.style.color = 'var(--gold)'}
                     onMouseLeave={e => e.target.style.color = 'var(--cream-dim)'}
@@ -91,7 +91,7 @@ export default function ContactPage() {
                     href="https://www.instagram.com/davidmintzcatering/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-display text-xs tracking-[0.25em]"
+                    className="font-display text-sm tracking-[0.25em]"
                     style={{ color: 'var(--cream-dim)' }}
                     onMouseEnter={e => e.target.style.color = 'var(--gold)'}
                     onMouseLeave={e => e.target.style.color = 'var(--cream-dim)'}
@@ -103,7 +103,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right — form */}
-            <div style={{ background: '#ffffff', padding: '3rem', border: '1px solid rgba(130,167,55,0.15)' }}>
+            <div style={{ background: '#eef3e7', padding: '3rem', border: '1px solid rgba(130,167,55,0.2)' }}>
               {submitted ? (
                 <div className="text-center py-16">
                   <h3 className="font-display mb-4" style={{ fontSize: '3rem', color: 'var(--gold)' }}>THANK YOU.</h3>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-7">
-                  <p className="font-display text-sm tracking-[0.3em] mb-8" style={{ color: 'var(--gold)' }}>SEND A MESSAGE</p>
+                  <p className="font-display text-base tracking-[0.3em] mb-8" style={{ color: 'var(--gold)' }}>SEND A MESSAGE</p>
 
                   {[
                     { label: 'Name', type: 'text', placeholder: 'Your full name' },
@@ -119,14 +119,14 @@ export default function ContactPage() {
                     { label: 'Phone', type: 'tel', placeholder: '(416) 000-0000' },
                   ].map((f) => (
                     <div key={f.label}>
-                      <label className="font-display text-xs tracking-[0.2em] block mb-2" style={{ color: 'var(--cream-dim)' }}>
+                      <label className="font-display text-sm tracking-[0.2em] block mb-2" style={{ color: 'var(--cream-dim)' }}>
                         {f.label.toUpperCase()}
                       </label>
                       <input
                         type={f.type}
                         placeholder={f.placeholder}
                         required
-                        className="w-full bg-transparent outline-none font-serif text-lg"
+                        className="w-full bg-transparent outline-none font-serif text-xl"
                         style={{
                           borderBottom: '1px solid rgba(0,0,0,0.15)',
                           color: 'var(--cream)',
@@ -139,7 +139,7 @@ export default function ContactPage() {
                   ))}
 
                   <div>
-                    <label className="font-display text-xs tracking-[0.2em] block mb-3" style={{ color: 'var(--cream-dim)' }}>
+                    <label className="font-display text-sm tracking-[0.2em] block mb-3" style={{ color: 'var(--cream-dim)' }}>
                       SERVICE TYPE
                     </label>
                     <div className="flex gap-3 flex-wrap">
@@ -148,7 +148,7 @@ export default function ContactPage() {
                           key={opt}
                           type="button"
                           onClick={() => setSelected(opt)}
-                          className="font-display text-xs tracking-[0.15em] px-5 py-2"
+                          className="font-display text-sm tracking-[0.15em] px-5 py-2"
                           style={{
                             border: '1px solid rgba(0,0,0,0.2)',
                             background: selected === opt ? 'var(--cream)' : 'transparent',
@@ -163,7 +163,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="font-display text-xs tracking-[0.2em] block mb-2" style={{ color: 'var(--cream-dim)' }}>
+                    <label className="font-display text-sm tracking-[0.2em] block mb-2" style={{ color: 'var(--cream-dim)' }}>
                       MESSAGE
                     </label>
                     <textarea
@@ -174,7 +174,7 @@ export default function ContactPage() {
                         border: '1px solid rgba(0,0,0,0.15)',
                         color: 'var(--cream)',
                         padding: '0.75rem',
-                        fontSize: '1rem',
+                        fontSize: '1.1rem',
                       }}
                       onFocus={e => e.target.style.borderColor = 'var(--gold)'}
                       onBlur={e => e.target.style.borderColor = 'rgba(0,0,0,0.15)'}
@@ -183,7 +183,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full font-display text-base tracking-[0.3em] uppercase py-4"
+                    className="w-full font-display text-lg tracking-[0.3em] uppercase py-4"
                     style={{ background: 'var(--cream)', color: '#ffffff' }}
                     onMouseEnter={e => e.currentTarget.style.background = '#333333'}
                     onMouseLeave={e => e.currentTarget.style.background = 'var(--cream)'}

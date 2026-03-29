@@ -224,21 +224,25 @@ export default function Home() {
 
       {/* CTA */}
       <section style={{ background: '#1a1a1a' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 text-center">
-          <h2 className="font-display leading-none text-[clamp(3rem,7vw,5rem)]" style={{ color: '#ffffff' }}>
-            READY TO PLAN<br />
-            <span style={{ color: 'var(--gold)' }}>YOUR EVENT?</span>
-          </h2>
-          <p className="font-serif text-lg mt-4 mb-8" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
-            Tell us about your event and we’ll craft a menu and service plan tailored to your guests.
-          </p>
-          <a
-            href="/contact"
-            className="font-display text-lg tracking-[0.25em] uppercase block w-full text-center py-4 sm:inline-block sm:w-auto sm:px-14"
-            style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
-          >
-            Book Now
-          </a>
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 text-center">
+          <div className="flex flex-col items-center" style={{ minHeight: '360px' }}>
+            <div>
+              <h2 className="font-display leading-none mb-8 text-[clamp(3rem,7vw,5rem)]" style={{ color: '#ffffff' }}>
+                READY TO PLAN<br />
+                <span style={{ color: 'var(--gold)' }}>YOUR EVENT?</span>
+              </h2>
+              <p className="font-serif text-lg" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.8 }}>
+                Tell us about your event and we’ll craft a menu and service plan tailored to your guests.
+              </p>
+            </div>
+            <a
+              href="/contact"
+              className="font-display text-lg tracking-[0.25em] uppercase block w-full text-center py-4 sm:inline-block sm:w-auto sm:px-14"
+              style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none', marginTop: 'auto' }}
+            >
+              Book Now
+            </a>
+          </div>
         </div>
       </section>
 
