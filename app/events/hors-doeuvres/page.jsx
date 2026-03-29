@@ -94,7 +94,7 @@ export default function HorsDoeuvresPage() {
                 href="https://dmcatering.ca/wp-content/uploads/2020/01/DMC-2019-Hors-D_Oeuvres.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display text-sm tracking-[0.2em] uppercase inline-block mt-6 px-8 py-4 text-center"
+                className="font-display text-sm tracking-[0.2em] uppercase block w-full text-center py-4 mt-6 sm:inline-block sm:w-auto sm:px-8"
                 style={{ border: '1px solid rgba(0,0,0,0.2)', color: '#1a1a1a', textDecoration: 'none' }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--gold)'; e.currentTarget.style.color = 'var(--gold)' }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.2)'; e.currentTarget.style.color = '#1a1a1a' }}
