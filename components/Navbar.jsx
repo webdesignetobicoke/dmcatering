@@ -215,7 +215,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/contact"
-              className="font-display text-sm tracking-[0.25em] uppercase inline-block px-6 py-3"
+              className="font-display text-sm tracking-[0.25em] uppercase block w-full text-center py-4"
               style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
               onClick={() => setOpen(false)}
             >
