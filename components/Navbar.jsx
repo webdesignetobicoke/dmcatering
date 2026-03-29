@@ -170,7 +170,7 @@ export default function Navbar() {
             l.dropdown ? (
               <li key={l.label}>
                 <button
-                  className="font-display text-base tracking-[0.2em] uppercase flex items-center gap-2 w-full text-left"
+                  className="font-display text-lg tracking-[0.2em] uppercase flex items-center gap-2 w-full text-left"
                   style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--cream-dim)', padding: 0 }}
                   onClick={() => setMobileOpenLabel(mobileOpenLabel === l.label ? null : l.label)}
                 >
@@ -188,7 +188,7 @@ export default function Navbar() {
                       <li key={sub.href}>
                         <Link
                           href={sub.href}
-                          className="font-display text-sm tracking-[0.2em] uppercase block"
+                          className="font-display text-base tracking-[0.2em] uppercase block"
                           style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
                           onClick={() => { setOpen(false); setMobileOpenLabel(null) }}
                         >
@@ -203,7 +203,7 @@ export default function Navbar() {
               <li key={l.label}>
                 <Link
                   href={l.href}
-                  className="font-display text-base tracking-[0.2em] uppercase"
+                  className="font-display text-lg tracking-[0.2em] uppercase"
                   style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
                   onClick={() => setOpen(false)}
                 >
@@ -215,7 +215,7 @@ export default function Navbar() {
           <li>
             <Link
               href="/contact"
-              className="font-display text-sm tracking-[0.25em] uppercase block w-full text-center py-4"
+              className="font-display text-base tracking-[0.25em] uppercase block w-full text-center py-4"
               style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
               onClick={() => setOpen(false)}
             >
