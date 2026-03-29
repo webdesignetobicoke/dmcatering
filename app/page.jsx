@@ -181,16 +181,16 @@ export default function Home() {
               <p className="font-serif text-xl mt-6" style={{ color: '#ffffff', lineHeight: 1.8 }}>
                 25+ years feeding casts and crews. We move fast, serve hot, and keep productions on schedule.
               </p>
-              <div className="mt-6 grid grid-cols-2 gap-3">
+              <ul className="mt-6 list-disc pl-5 grid grid-cols-2 gap-3" style={{ color: 'var(--gold)' }}>
                 {['Crew Breakfast', 'Hot Lunch', 'Craft Services', 'Dietary Friendly'].map(item => (
-                  <div key={item} className="font-display text-base tracking-[0.2em]" style={{ color: '#ffffff' }}>
+                  <li key={item} className="font-display text-base tracking-[0.2em]" style={{ color: '#ffffff' }}>
                     {item.toUpperCase()}
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
               <a
                 href="/film-tv"
-                className="font-display text-base tracking-[0.25em] uppercase inline-block mt-8 px-10 py-4"
+                className="hidden lg:inline-block font-display text-base tracking-[0.25em] uppercase mt-8 px-10 py-4"
                 style={{ border: '1px solid rgba(255,255,255,0.25)', color: '#ffffff', textDecoration: 'none' }}
               >
                 Explore Film & TV →
@@ -203,6 +203,13 @@ export default function Home() {
               <div style={{ aspectRatio: '3/4', overflow: 'hidden' }}>
                 <img src="/hors-doeuvres/duck.jpeg" alt="Duck" className="w-full h-full" style={{ objectFit: 'cover' }} />
               </div>
+              <a
+                href="/film-tv"
+                className="lg:hidden font-display text-base tracking-[0.25em] uppercase block w-full text-center py-4 mt-6 col-span-2"
+                style={{ border: '1px solid rgba(255,255,255,0.25)', color: '#ffffff', textDecoration: 'none' }}
+              >
+                Explore Film & TV →
+              </a>
             </div>
           </div>
         </div>
@@ -236,20 +243,20 @@ export default function Home() {
       {/* CTA */}
       <section style={{ background: '#1a1a1a' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 text-center">
-          <div className="flex flex-col items-center" style={{ minHeight: '360px' }}>
+          <div className="flex flex-col items-center min-h-0 lg:min-h-[360px]">
             <div>
               <h2 className="font-display leading-none mb-8 text-[clamp(3rem,7vw,5rem)]" style={{ color: '#ffffff' }}>
                 READY TO PLAN<br />
                 <span style={{ color: 'var(--gold)' }}>YOUR EVENT?</span>
               </h2>
-              <p className="font-serif text-lg" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.8 }}>
-                Tell us about your event and we’ll craft a menu and service plan tailored to your guests.
+              <p className="font-serif text-lg" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '560px', margin: '0 auto 2.5rem', lineHeight: 1.8 }}>
+                Tell us about your event and we&apos;ll craft a menu and service plan tailored to your guests.
               </p>
             </div>
             <a
               href="/contact"
               className="font-display text-lg tracking-[0.25em] uppercase block w-full text-center py-4 sm:inline-block sm:w-auto sm:px-14"
-              style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none', marginTop: 'auto' }}
+              style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
             >
               Book Now
             </a>

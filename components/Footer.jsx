@@ -26,15 +26,13 @@ export default function Footer() {
             <p className="font-serif" style={{ color: '#ffffff', lineHeight: 1.8, fontSize: '1.05rem', maxWidth: '320px' }}>
               Toronto's premier catering service for Film, TV, Corporate, and Social events — since 1998.
             </p>
-            <div className="flex gap-6 mt-8">
+            <div className="flex flex-wrap gap-4 mt-8">
               <a
                 href="https://www.instagram.com/davidmintzcatering/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display text-xs tracking-[0.25em]"
-                style={{ color: '#ffffff' }}
-                onMouseEnter={e => e.target.style.color = 'var(--gold)'}
-                onMouseLeave={e => e.target.style.color = '#ffffff'}
+                className="font-display text-sm tracking-[0.25em] uppercase px-6 py-3 inline-block"
+                style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
               >
                 INSTAGRAM
               </a>
@@ -42,10 +40,8 @@ export default function Footer() {
                 href="https://www.facebook.com/David-Mintz-Catering-486119858172281/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display text-xs tracking-[0.25em]"
-                style={{ color: '#ffffff' }}
-                onMouseEnter={e => e.target.style.color = 'var(--gold)'}
-                onMouseLeave={e => e.target.style.color = '#ffffff'}
+                className="font-display text-sm tracking-[0.25em] uppercase px-6 py-3 inline-block"
+                style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
               >
                 FACEBOOK
               </a>
