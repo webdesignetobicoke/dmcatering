@@ -154,12 +154,51 @@ export default function FilmTV({
             <p className="font-serif" style={{ color: 'var(--cream-dim)', lineHeight: 1.8, fontSize: '1rem' }}>
               We provide every person on every set with personal attention. We are only as good as our last meal.
             </p>
-            <ul className="mt-6 list-disc pl-5" style={{ color: 'var(--cream-dim)', lineHeight: 1.8, fontSize: '1.05rem' }}>
-              <li className="font-display text-base tracking-[0.2em]">CREW BREAKFAST</li>
-              <li className="font-display text-base tracking-[0.2em]">HOT LUNCH</li>
-              <li className="font-display text-base tracking-[0.2em]">CRAFT SERVICES</li>
-              <li className="font-display text-base tracking-[0.2em]">DIETARY FRIENDLY</li>
-            </ul>
+            <div className="mt-8 grid grid-cols-2 gap-4">
+              {[
+                {
+                  label: 'CREW BREAKFAST',
+                  // Sunrise / morning
+                  icon: (
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M2 12h2"/><path d="M12 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"/><path d="M5 19H19"/><path d="M3 22h18"/>
+                    </svg>
+                  ),
+                },
+                {
+                  label: 'HOT LUNCH',
+                  // Plate cloche
+                  icon: (
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 20h18"/><path d="M3 14h18"/><path d="M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9z"/><line x1="12" y1="3" x2="12" y2="6"/>
+                    </svg>
+                  ),
+                },
+                {
+                  label: 'CRAFT SERVICES',
+                  // Shopping bag
+                  icon: (
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M4 11h16l-1.5 9H5.5L4 11z"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><line x1="9" y1="15" x2="9" y2="19"/><line x1="15" y1="15" x2="15" y2="19"/>
+                    </svg>
+                  ),
+                },
+                {
+                  label: 'DIETARY FRIENDLY',
+                  // Leaf
+                  icon: (
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 22c1.25-1.25 2.5-2.5 3.75-3.75C7.5 16.5 10 14 12 12c2-2 4.5-4.5 6.25-6.25C20 4 21 2 22 2c0 1-2 2-3.75 3.75C16.5 7.5 14 10 12 12c-2 2-4.5 4.5-6.25 6.25C4 20 2 22 2 22z"/><path d="M22 2C22 2 17 7 12 12S2 22 2 22c4-1 9-4 13-8s5-9 7-12z"/>
+                    </svg>
+                  ),
+                },
+              ].map(({ label, icon }) => (
+                <div key={label} className="flex items-center gap-3 py-3" style={{ borderBottom: '1px solid rgba(0,0,0,0.08)', color: 'var(--cream-dim)' }}>
+                  <span style={{ flexShrink: 0 }}>{icon}</span>
+                  <span className="font-display text-sm tracking-[0.18em]" style={{ color: 'var(--cream)' }}>{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

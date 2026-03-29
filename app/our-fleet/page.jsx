@@ -20,18 +20,14 @@ export default function OurFleetPage() {
       <Navbar />
       <section style={{ background: '#f5f5f5', paddingTop: '140px' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-12">
-            <div>
-              <h1 className="font-display leading-none text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]" style={{ color: 'var(--cream)' }}>
-                OUR<br />
-                <span style={{ color: 'var(--gold)' }}>FLEET.</span>
-              </h1>
-            </div>
-            <div>
-              <p className="font-serif text-lg" style={{ color: 'var(--cream-dim)', lineHeight: 1.7 }}>
-                We bring fully-mobile, state-of-the-art kitchens on wheels to every production — serving hot, fresh breakfasts and lunches cooked on location.
-              </p>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-10 items-start mb-12">
+            <h1 className="font-display leading-none text-[clamp(4rem,10vw,7rem)] sm:text-[clamp(3.5rem,8vw,7rem)]" style={{ color: 'var(--cream)' }}>
+              OUR<br />
+              <span style={{ color: 'var(--gold)' }}>FLEET.</span>
+            </h1>
+            <p className="font-serif text-lg" style={{ color: 'var(--cream-dim)', lineHeight: 1.7 }}>
+              We bring fully-mobile, state-of-the-art kitchens on wheels to every production — serving hot, fresh breakfasts and lunches cooked on location.
+            </p>
           </div>
 
           <div className="grid gap-2" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
@@ -49,6 +45,7 @@ export default function OurFleetPage() {
               </div>
             ))}
           </div>
+
         </div>
       </section>
 

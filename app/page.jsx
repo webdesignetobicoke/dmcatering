@@ -95,18 +95,24 @@ export default function Home() {
   ]
 
   const logos = [
-    'cisco.com',
-    'deloitte.com',
-    'scotiabank.com',
-    'sony.com',
-    'harley-davidson.com',
-    'labatt.com',
-    'pinewoodgroup.com',
-    'panavision.com',
-    'georgebrown.ca',
-    'centennialcollege.ca',
-    'cifinancial.com',
-    'brainstation.io',
+    { name: 'Cisco', src: '/company logos/cisco logo.png' },
+    { name: 'Deloitte', src: '/company logos/deloitte logo.png' },
+    { name: 'Scotiabank', src: '/company logos/scotiabank logo.png' },
+    { name: 'Sony', src: '/company logos/sony logo.png' },
+    { name: 'Harley Davidson', src: '/company logos/harley davidson logo.png' },
+    { name: 'Labatt', src: '/company logos/labatt logo.png' },
+    { name: 'Pinewood Group', src: '/company logos/pinewood group logo.png' },
+    { name: 'Panavision', src: '/company logos/panavision logo.png' },
+    { name: 'George Brown College', src: '/company logos/george brown college logo.png' },
+    { name: 'Centennial College', src: '/company logos/centennial college logo.png' },
+    { name: 'CI Financial', src: '/company logos/ci financial logo.png' },
+    { name: 'BrainStation', src: '/company logos/brainstation logo.png' },
+    { name: 'City of Mississauga', src: '/company logos/city of mississauga logo.png' },
+    { name: 'Farber Financial', src: '/company logos/farber financial logo.png' },
+    { name: 'Info Tech', src: '/company logos/info tech logo.png' },
+    { name: 'MacGregors', src: '/company logos/macgregors logo.png' },
+    { name: 'Sheridan College', src: '/company logos/sheridan college logo.png' },
+    { name: 'William F. White', src: '/company logos/william f. white logo.webp' },
   ]
 
   return (
@@ -198,15 +204,10 @@ export default function Home() {
       {/* Services */}
       <section style={{ background: '#f5f5f5' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
-          <div className="grid lg:grid-cols-2 gap-10 items-end mb-12">
-            <h2 className="font-display leading-none text-[clamp(3rem,7vw,5.5rem)]" style={{ color: 'var(--cream)' }}>
-              EVERYTHING YOU NEED.<br />
-              <span style={{ color: 'var(--gold)' }}>ONE TEAM.</span>
-            </h2>
-            <p className="font-serif text-lg" style={{ color: 'var(--cream-dim)', lineHeight: 1.8 }}>
-              Full-service catering with a production-minded crew. We handle timing, logistics, and service so you can stay focused on the moment.
-            </p>
-          </div>
+          <h2 className="font-display leading-none text-[clamp(3rem,7vw,5.5rem)] mb-12" style={{ color: 'var(--cream)' }}>
+            EVERYTHING YOU NEED.<br />
+            <span style={{ color: 'var(--gold)' }}>ONE TEAM.</span>
+          </h2>
 
           <div className="grid lg:grid-cols-3 gap-6">
             {services.map(card => (
@@ -232,62 +233,66 @@ export default function Home() {
       </section>
 
       {/* Film & TV */}
-      <section style={{ background: '#101010' }}>
+      <section style={{ background: '#ffffff' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-display leading-none text-[clamp(3rem,7vw,5.5rem)]" style={{ color: '#ffffff' }}>
+              <h2 className="font-display leading-none text-[clamp(3rem,7vw,5.5rem)]" style={{ color: 'var(--cream)' }}>
                 ON SET.<br />
                 <span style={{ color: 'var(--gold)' }}>ON TIME.</span>
               </h2>
-              <p className="font-serif text-xl mt-6" style={{ color: '#ffffff', lineHeight: 1.8 }}>
+              <p className="font-serif text-xl mt-6" style={{ color: 'var(--cream-dim)', lineHeight: 1.8 }}>
                 25+ years feeding casts and crews. We move fast, serve hot, and keep productions on schedule.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {[
                   {
                     label: 'Crew Breakfast',
+                    // Sunrise / morning
                     icon: (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M2 12h2"/><path d="M12 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"/><path d="M5 19H19"/><path d="M3 22h18"/>
                       </svg>
                     ),
                   },
                   {
                     label: 'Hot Lunch',
+                    // Plate with dome/cloche
                     icon: (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M3 11l19-9-9 19-2-8-8-2z"/>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 20h18"/><path d="M3 14h18"/><path d="M12 3a9 9 0 0 1 9 9H3a9 9 0 0 1 9-9z"/><line x1="12" y1="3" x2="12" y2="6"/>
                       </svg>
                     ),
                   },
                   {
                     label: 'Craft Services',
+                    // Snack basket / shopping bag with food
                     icon: (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 11h16l-1.5 9H5.5L4 11z"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><line x1="9" y1="15" x2="9" y2="19"/><line x1="15" y1="15" x2="15" y2="19"/>
                       </svg>
                     ),
                   },
                   {
                     label: 'Dietary Friendly',
+                    // Leaf
                     icon: (
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M2 22c1.25-1.25 2.5-2.5 3.75-3.75C7.5 16.5 10 14 12 12c2-2 4.5-4.5 6.25-6.25C20 4 21 2 22 2c0 1-2 2-3.75 3.75C16.5 7.5 14 10 12 12c-2 2-4.5 4.5-6.25 6.25C4 20 2 22 2 22z"/><path d="M22 2C22 2 17 7 12 12S2 22 2 22c4-1 9-4 13-8s5-9 7-12z"/>
                       </svg>
                     ),
                   },
                 ].map(({ label, icon }) => (
-                  <div key={label} className="flex items-center gap-3 py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-                    <span style={{ opacity: 0.9, flexShrink: 0 }}>{icon}</span>
-                    <span className="font-display text-sm tracking-[0.18em]" style={{ color: '#ffffff' }}>{label.toUpperCase()}</span>
+                  <div key={label} className="flex items-center gap-3 py-3" style={{ borderBottom: '1px solid rgba(0,0,0,0.08)', color: 'var(--cream-dim)' }}>
+                    <span style={{ flexShrink: 0 }}>{icon}</span>
+                    <span className="font-display text-sm tracking-[0.18em]" style={{ color: 'var(--cream)' }}>{label.toUpperCase()}</span>
                   </div>
                 ))}
               </div>
               <a
                 href="/film-tv"
                 className="hidden lg:inline-block font-display text-base tracking-[0.25em] uppercase mt-8 px-10 py-4"
-                style={{ border: '1px solid rgba(255,255,255,0.25)', color: '#ffffff', textDecoration: 'none' }}
+                style={{ border: '1px solid rgba(0,0,0,0.2)', color: 'var(--cream)', textDecoration: 'none' }}
               >
                 Explore Film & TV →
               </a>
@@ -302,7 +307,7 @@ export default function Home() {
               <a
                 href="/film-tv"
                 className="lg:hidden font-display text-base tracking-[0.25em] uppercase block w-full text-center py-4 mt-6 col-span-2"
-                style={{ border: '1px solid rgba(255,255,255,0.25)', color: '#ffffff', textDecoration: 'none' }}
+                style={{ border: '1px solid rgba(0,0,0,0.2)', color: 'var(--cream)', textDecoration: 'none' }}
               >
                 Explore Film & TV →
               </a>
@@ -352,7 +357,7 @@ export default function Home() {
       {/* ─── EVENTS ─── */}
       <section style={{ background: '#f5f5f5' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
-          <div className="grid lg:grid-cols-2 gap-10 items-end mb-12">
+          <div className="grid lg:grid-cols-2 gap-10 items-start mb-12">
             <h2 className="font-display leading-none text-[clamp(3rem,7vw,5.5rem)]" style={{ color: 'var(--cream)' }}>
               UNFORGETTABLE<br />
               <span style={{ color: 'var(--gold)' }}>EVENTS.</span>
@@ -361,12 +366,11 @@ export default function Home() {
               From intimate cocktail receptions to grand gala dinners, we bring the same precision and flavour to every celebration.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+          <div className="grid md:grid-cols-3 gap-4 mb-10">
             {[
-              { label: 'Cocktail Receptions', img: '/hors-doeuvres/duck.jpeg', href: '/events' },
-              { label: 'Gala Dinners', img: '/sitdown/beef.jpeg', href: '/events' },
-              { label: 'Station Dining', img: '/stations/stations1.jpg', href: '/events' },
-              { label: 'Corporate Events', img: '/stations/sweet-and-spicy-chicken.jpg', href: '/events' },
+              { label: "Hors D'oeuvres", img: '/hors-doeuvres/duck.jpeg', href: '/events' },
+              { label: 'Sit-Down Dinners', img: '/sitdown/beef.jpeg', href: '/events' },
+              { label: 'Stations', img: '/stations/stations1.jpg', href: '/events' },
             ].map(card => (
               <a key={card.label} href={card.href} className="relative overflow-hidden group block" style={{ aspectRatio: '3/4', textDecoration: 'none' }}>
                 <img src={card.img} alt={card.label} className="w-full h-full transition-transform duration-500 group-hover:scale-105" style={{ objectFit: 'cover' }} />
@@ -391,21 +395,26 @@ export default function Home() {
       {/* Clients */}
       <section style={{ background: '#ffffff' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
-          <h2 className="font-display leading-none text-[clamp(3rem,7vw,5.5rem)] mb-10" style={{ color: 'var(--cream)' }}>
-            TRUSTED BY<br />
-            <span style={{ color: 'var(--gold)' }}>THE BEST.</span>
-          </h2>
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6" style={{ borderTop: '1px solid rgba(0,0,0,0.08)', borderLeft: '1px solid rgba(0,0,0,0.08)' }}>
-            {logos.map(domain => (
+          <div className="grid lg:grid-cols-2 gap-10 items-start mb-10">
+            <h2 className="font-display leading-none text-[clamp(3rem,7vw,5.5rem)]" style={{ color: 'var(--cream)' }}>
+              TRUSTED BY<br />
+              <span style={{ color: 'var(--gold)' }}>THE BEST.</span>
+            </h2>
+            <p className="font-serif text-lg" style={{ color: 'var(--cream-dim)', lineHeight: 1.8 }}>
+              From Hollywood studios to Toronto's most respected corporations, David Mintz Catering has earned the trust of industry leaders across film, finance, tech, and education.
+            </p>
+          </div>
+          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-6" style={{ borderTop: '1px solid rgba(0,0,0,0.08)', borderLeft: '1px solid rgba(0,0,0,0.08)' }}>
+            {logos.map(logo => (
               <div
-                key={domain}
+                key={logo.name}
                 className="flex items-center justify-center p-6"
                 style={{ borderBottom: '1px solid rgba(0,0,0,0.08)', borderRight: '1px solid rgba(0,0,0,0.08)', minHeight: '90px' }}
               >
                 <img
-                  src={`https://logo.clearbit.com/${domain}`}
-                  alt={domain}
-                  style={{ height: '28px', width: 'auto', maxWidth: '120px', filter: 'brightness(0)', opacity: 1 }}
+                  src={logo.src}
+                  alt={logo.name}
+                  style={{ width: '90px', height: '40px', objectFit: 'contain' }}
                 />
               </div>
             ))}
