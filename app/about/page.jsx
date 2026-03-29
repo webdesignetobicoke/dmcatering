@@ -13,7 +13,7 @@ export default function AboutPage() {
     <main>
       <Navbar />
       <div style={{ paddingTop: '80px' }}>
-        <About heroBg="#ffffff" altBg="#f5f5f5" altBorder="1px solid rgba(130,167,55,0.1)" />
+        <About heroBg="#ffffff" altBg="#f5f5f5" altBorder="1px solid rgba(130,167,55,0.1)" split />
       </div>
       <CTASection line1="LET'S WORK" line2="TOGETHER." desc="Tell us about your event and we'll build a custom menu around your vision." />
       <Footer />

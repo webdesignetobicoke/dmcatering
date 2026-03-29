@@ -30,7 +30,10 @@ export default function About({
   altBg = '#f5f5f5',
   heroBorder = '1px solid rgba(130,167,55,0.1)',
   altBorder = 'none',
+  split = false,
 }) {
+  const teamPadding = split ? 'py-24' : 'pt-0 pb-24'
+
   return (
     <>
       <section id="about" style={{ background: heroBg, borderTop: heroBorder }}>
@@ -80,7 +83,7 @@ export default function About({
       </section>
 
       <section style={{ background: altBg, borderTop: altBorder }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24">
+        <div className={`max-w-7xl mx-auto px-6 lg:px-12 ${teamPadding}`}>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {TEAM.map((m) => (
               <div key={m.name} className="group">
