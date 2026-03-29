@@ -12,7 +12,6 @@ const links = [
       { label: 'Custom Menus', href: '/custom-menus' },
     ],
   },
-  { label: 'Film & TV', href: '/film-tv' },
   {
     label: 'Events',
     href: '/events',
