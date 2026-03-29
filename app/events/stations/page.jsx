@@ -187,17 +187,6 @@ export default function StationsPage() {
                 >
                   Book Now
                 </Link>
-                <a
-                  href="https://dmcatering.ca/wp-content/uploads/2020/01/DMC-2019-Stations.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-display text-sm tracking-[0.2em] uppercase px-8 py-4 text-center"
-                  style={{ border: '1px solid rgba(0,0,0,0.2)', color: '#1a1a1a', textDecoration: 'none' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--gold)'; e.currentTarget.style.color = 'var(--gold)' }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.2)'; e.currentTarget.style.color = '#1a1a1a' }}
-                >
-                  Download PDF ↓
-                </a>
               </div>
             </div>
             <div className="mt-0">
@@ -207,6 +196,17 @@ export default function StationsPage() {
               <p style={{ color: 'rgba(0,0,0,0.55)', lineHeight: 1.8, fontSize: '0.95rem' }}>
                 Stations are priced from $9 to $22 per person. Mix and match stations to build your perfect event menu. Contact us for a personalized quote.
               </p>
+              <a
+                href="https://dmcatering.ca/wp-content/uploads/2020/01/DMC-2019-Stations.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-display text-sm tracking-[0.2em] uppercase block w-full text-center py-4 mt-6 sm:inline-block sm:w-auto sm:px-8"
+                style={{ border: '1px solid rgba(0,0,0,0.2)', color: '#1a1a1a', textDecoration: 'none' }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--gold)'; e.currentTarget.style.color = 'var(--gold)' }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.2)'; e.currentTarget.style.color = '#1a1a1a' }}
+              >
+                Download PDF ↓
+              </a>
             </div>
           </div>
         </div>
