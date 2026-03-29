@@ -149,7 +149,7 @@ export default function HorsDoeuvresPage() {
       </div>
 
       {/* Photo strip */}
-      <div className="grid grid-cols-4" style={{ background: '#1a1a1a' }}>
+      <div className="hidden lg:grid grid-cols-4" style={{ background: '#1a1a1a' }}>
         {[
           { src: "/hors-doeuvres/enoki-quail-egg.jpeg", alt: 'Enoki Quail Egg' },
           { src: "/hors-doeuvres/beef-tartare.jpeg", alt: 'Beef Tartare' },
