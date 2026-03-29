@@ -43,7 +43,7 @@ export default function Navbar() {
             src="https://dmcatering.ca/wp-content/uploads/2020/01/dmc_logo_colour-1.png"
             alt="David Mintz Catering"
             className="w-auto"
-            style={{ height: '68px' }}
+            style={{ height: '90px' }}
           />
         </Link>
 
