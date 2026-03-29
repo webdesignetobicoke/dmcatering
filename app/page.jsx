@@ -61,7 +61,7 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="order-1">
               <h1
                 className="font-display leading-none mb-6 text-[clamp(3.4rem,9vw,6.5rem)]"
                 style={{ color: '#ffffff' }}
@@ -72,6 +72,17 @@ export default function Home() {
               <p className="font-serif text-lg mb-8" style={{ color: '#ffffff', lineHeight: 1.8, maxWidth: '560px' }}>
                 From film sets to private celebrations, we deliver bold menus, flawless logistics, and a team that treats every guest like a VIP.
               </p>
+              <div className="lg:hidden grid grid-cols-2 gap-3 mb-8">
+                <div className="col-span-2" style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
+                  <img src="/team-dmc-hero.jpg" alt="David Mintz Catering" className="w-full h-full" style={{ objectFit: 'cover' }} />
+                </div>
+                <div style={{ aspectRatio: '4/5', overflow: 'hidden' }}>
+                  <img src="/stations/scallops.jpg" alt="Scallops" className="w-full h-full" style={{ objectFit: 'cover' }} />
+                </div>
+                <div style={{ aspectRatio: '4/5', overflow: 'hidden' }}>
+                  <img src="/sitdown/scallop.jpeg" alt="Sit Down" className="w-full h-full" style={{ objectFit: 'cover' }} />
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/contact"
@@ -90,7 +101,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="hidden lg:grid grid-cols-2 gap-3 mt-8 lg:mt-0">
               <div className="col-span-2" style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
                 <img src="/team-dmc-hero.jpg" alt="David Mintz Catering" className="w-full h-full" style={{ objectFit: 'cover' }} />
               </div>
