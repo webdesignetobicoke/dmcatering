@@ -71,6 +71,16 @@ export default function HorsDoeuvresPage() {
                 HORS<br />
                 <span style={{ color: 'var(--gold)' }}>D'OEUVRES.</span>
               </h1>
+              <div className="lg:hidden mb-6">
+                <div style={{ overflow: 'hidden', borderRadius: '8px', aspectRatio: '4/3' }}>
+                  <img
+                    src="/hors-doeuvres/duck.jpeg"
+                    alt="Hors d'oeuvres"
+                    className="w-full h-full"
+                    style={{ objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
                   href="/contact"
