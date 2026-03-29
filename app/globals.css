@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/gt-walsheim-font-family/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/gt-walsheim-font-family/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim';
+  src: url('/gt-walsheim-font-family/GT-Walsheim-Bold-Trial-BF651b7fc737c57.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --black: #ffffff;
+  --off-black: #f5f5f5;
+  --charcoal: #eeeeee;
+  --warm-dark: #f9f9f9;
+  --gold: #82a737;
+  --gold-light: #9dc940;
+  --gold-dim: #5f7e28;
+  --cream: #1a1a1a;
+  --cream-dim: #555555;
+  --white: #ffffff;
+  --film-accent: #82a737;
+  --social-accent: #82a737;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+.font-display { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.05em; }
+.font-serif { font-family: 'GT Walsheim', sans-serif; font-weight: 400; }
+
+::selection { background: var(--gold); color: #ffffff; }
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #f5f5f5; }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
