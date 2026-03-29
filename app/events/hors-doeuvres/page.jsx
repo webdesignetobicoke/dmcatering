@@ -71,15 +71,22 @@ export default function HorsDoeuvresPage() {
                 HORS<br />
                 <span style={{ color: 'var(--gold)' }}>D'OEUVRES.</span>
               </h1>
-              <div className="lg:hidden mb-6">
-                <div style={{ overflow: 'hidden', aspectRatio: '4/3' }}>
-                  <img
-                    src="/hors-doeuvres/enoki-quail-egg.jpeg"
-                    alt="Hors d'oeuvres"
-                    className="w-full h-full"
-                    style={{ objectFit: 'cover', display: 'block' }}
-                  />
-                </div>
+              <div className="lg:hidden mb-6 grid grid-cols-2 gap-2">
+                {[
+                  { src: "/hors-doeuvres/enoki-quail-egg.jpeg", alt: 'Enoki Quail Egg' },
+                  { src: "/hors-doeuvres/beef-tartare.jpeg", alt: 'Beef Tartare' },
+                  { src: "/hors-doeuvres/duck.jpeg", alt: 'Duck' },
+                  { src: "/hors-doeuvres/figs.jpeg", alt: 'Figs' },
+                ].map(img => (
+                  <div key={img.alt} style={{ overflow: 'hidden', aspectRatio: '4/3' }}>
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full"
+                      style={{ objectFit: 'cover', display: 'block' }}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
