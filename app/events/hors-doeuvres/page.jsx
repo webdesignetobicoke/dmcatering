@@ -123,29 +123,7 @@ export default function HorsDoeuvresPage() {
           </div>
         </div>
 
-        {/* Mobile scroll indicator */}
-        <div className="lg:hidden flex justify-center pb-6">
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '4px',
-              animation: 'bounce 1.8s infinite',
-            }}
-          >
-            <span className="font-display text-base tracking-[0.2em]" style={{ color: 'var(--gold)' }}>SCROLL</span>
-            <svg width="24" height="24" viewBox="0 0 16 16" fill="none">
-              <path d="M2 5L8 11L14 5" stroke="var(--gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
-        </div>
-        <style>{`
-          @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(6px); }
-          }
-        `}</style>
+ 
       </div>
 
       {/* Photo strip */}
