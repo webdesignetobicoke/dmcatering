@@ -74,7 +74,7 @@ export default function HorsDoeuvresPage() {
               <div className="lg:hidden mb-6">
                 <div style={{ overflow: 'hidden', aspectRatio: '4/3' }}>
                   <img
-                    src="/hors-doeuvres/duck.jpeg"
+                    src="/hors-doeuvres/enoki-quail-egg.jpeg"
                     alt="Hors d'oeuvres"
                     className="w-full h-full"
                     style={{ objectFit: 'cover', display: 'block' }}
