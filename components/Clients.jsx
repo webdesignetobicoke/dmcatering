@@ -54,7 +54,7 @@ export default function Clients() {
                   width: 'auto',
                   maxWidth: '110px',
                   filter: 'brightness(0)',
-                  opacity: 0.6,
+                  opacity: 1,
                 }}
                 onError={e => {
                   e.target.style.display = 'none'

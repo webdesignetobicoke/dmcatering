@@ -115,21 +115,10 @@ const MOVIES = [
 
 const TRUCKS = [
   'https://dmcatering.ca/wp-content/uploads/2021/05/TRAILER-PIC.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2419.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2311.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2161.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2131.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2115.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2110.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2108.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2094.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2057.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2033.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2027.jpg',
   'https://dmcatering.ca/wp-content/uploads/2021/04/truck-2.jpg',
   'https://dmcatering.ca/wp-content/uploads/2021/04/truck-1.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2020/01/Film-Catering-3-480x400-1.jpg',
-  'https://dmcatering.ca/wp-content/uploads/2020/01/IMG_0958-480x400-1.jpg',
+  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2419.jpg',
+  'https://dmcatering.ca/wp-content/uploads/2021/05/IMG_2033.jpg',
 ]
 
 export default function FilmTV({
@@ -165,6 +154,12 @@ export default function FilmTV({
             <p className="font-serif" style={{ color: 'var(--cream-dim)', lineHeight: 1.8, fontSize: '1rem' }}>
               We provide every person on every set with personal attention. We are only as good as our last meal.
             </p>
+            <ul className="mt-6 list-disc pl-5" style={{ color: 'var(--cream-dim)', lineHeight: 1.8, fontSize: '1.05rem' }}>
+              <li className="font-display text-base tracking-[0.2em]">CREW BREAKFAST</li>
+              <li className="font-display text-base tracking-[0.2em]">HOT LUNCH</li>
+              <li className="font-display text-base tracking-[0.2em]">CRAFT SERVICES</li>
+              <li className="font-display text-base tracking-[0.2em]">DIETARY FRIENDLY</li>
+            </ul>
           </div>
         </div>
 
@@ -244,7 +239,7 @@ export default function FilmTV({
             className="grid gap-2"
             style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}
           >
-            {TRUCKS.map((src, i) => (
+            {TRUCKS.slice(0, 5).map((src, i) => (
               <div
                 key={i}
                 className="group relative overflow-hidden cursor-pointer"

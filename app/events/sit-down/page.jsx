@@ -355,7 +355,7 @@ export default function SitDownPage() {
             READY TO PLAN YOUR<br />
             <span style={{ color: 'var(--gold)' }}>SIT DOWN DINNER?</span>
           </h2>
-          <p className="font-serif text-lg mb-10" style={{ color: 'rgba(255,255,255,0.55)', maxWidth: '500px', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+          <p className="font-serif text-lg mb-8" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
             Tell us about your event and we'll craft a custom dinner menu around your vision.
           </p>
           <Link

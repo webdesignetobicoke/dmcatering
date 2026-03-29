@@ -11,12 +11,12 @@ export default function CTASection({ line1 = 'READY TO PLAN', line2 = 'YOUR EVEN
           {line1}<br />
           <span style={{ color: 'var(--gold)' }}>{line2}</span>
         </h2>
-        <p className="font-serif text-lg mb-10" style={{ color: 'rgba(255,255,255,0.55)', maxWidth: '500px', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+        <p className="font-serif text-lg mb-8" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
           {desc}
         </p>
         <Link
           href="/contact"
-          className="font-display text-lg tracking-[0.25em] uppercase px-14 py-4 inline-block w-full lg:w-auto text-center"
+          className="font-display text-lg tracking-[0.25em] uppercase block w-full text-center py-4 sm:inline-block sm:w-auto sm:px-14"
           style={{ background: 'var(--gold)', color: '#1a1a1a', textDecoration: 'none' }}
         >
           Book Now

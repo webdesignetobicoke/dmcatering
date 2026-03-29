@@ -340,7 +340,7 @@ export default function StationsPage() {
             READY TO BUILD<br />
             <span style={{ color: 'var(--gold)' }}>YOUR STATIONS?</span>
           </h2>
-          <p className="font-serif text-lg mb-10" style={{ color: 'rgba(255,255,255,0.55)', maxWidth: '500px', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+          <p className="font-serif text-lg mb-8" style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}>
             Tell us about your event and we'll build a custom station lineup around your vision.
           </p>
           <Link

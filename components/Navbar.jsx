@@ -21,6 +21,7 @@ const links = [
       { label: 'Sit Down', href: '/events/sit-down' },
     ],
   },
+  { label: 'Our Fleet', href: '/our-fleet' },
   { label: 'About', href: '/about' },
   { label: 'Clients', href: '/clients' },
 ]
@@ -39,13 +40,13 @@ function DropdownItem({ item }) {
 
   return (
     <li ref={ref} className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
-      <Link
-        href={item.href}
-        className="font-display text-xl tracking-[0.15em] uppercase flex items-center gap-1"
-        style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
-        onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
-        onMouseLeave={e => e.currentTarget.style.color = 'var(--cream-dim)'}
-      >
+        <Link
+          href={item.href}
+          className="font-display text-xl tracking-[0.15em] uppercase flex items-center gap-1"
+          style={{ color: '#ffffff', textDecoration: 'none' }}
+          onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
+          onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
+        >
         {item.label}
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" style={{ marginLeft: '2px', marginTop: '2px', flexShrink: 0 }}>
           <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -92,8 +93,8 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: '#ffffff',
-        borderBottom: '1px solid rgba(130,167,55,0.2)',
+        background: '#0f0f0f',
+        borderBottom: '1px solid rgba(255,255,255,0.08)',
         boxShadow: scrolled ? '0 2px 24px rgba(0,0,0,0.07)' : 'none',
       }}
     >
@@ -119,9 +120,9 @@ export default function Navbar() {
                 <Link
                   href={l.href}
                   className="font-display text-xl tracking-[0.15em] uppercase"
-                  style={{ color: 'var(--cream-dim)', textDecoration: 'none' }}
+                  style={{ color: '#ffffff', textDecoration: 'none' }}
                   onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
-                  onMouseLeave={e => e.currentTarget.style.color = 'var(--cream-dim)'}
+                  onMouseLeave={e => e.currentTarget.style.color = '#ffffff'}
                 >
                   {l.label}
                 </Link>
@@ -148,9 +149,9 @@ export default function Navbar() {
           aria-label="Toggle menu"
           style={{ background: 'none', border: 'none', cursor: 'pointer' }}
         >
-          <span className="block w-6 h-0.5" style={{ background: open ? 'var(--gold)' : 'var(--cream)', transform: open ? 'rotate(45deg) translate(0px, 6px)' : '' }} />
-          <span className="block w-6 h-0.5" style={{ background: open ? 'transparent' : 'var(--cream)', opacity: open ? 0 : 1 }} />
-          <span className="block w-6 h-0.5" style={{ background: open ? 'var(--gold)' : 'var(--cream)', transform: open ? 'rotate(-45deg) translate(0px, -6px)' : '' }} />
+          <span className="block w-6 h-0.5" style={{ background: open ? 'var(--gold)' : 'var(--gold)', transform: open ? 'rotate(45deg) translate(0px, 6px)' : '' }} />
+          <span className="block w-6 h-0.5" style={{ background: open ? 'transparent' : 'var(--gold)', opacity: open ? 0 : 1 }} />
+          <span className="block w-6 h-0.5" style={{ background: open ? 'var(--gold)' : 'var(--gold)', transform: open ? 'rotate(-45deg) translate(0px, -6px)' : '' }} />
         </button>
       </div>
 
