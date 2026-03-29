@@ -160,6 +160,23 @@ export default function SitDownPage() {
                 SIT DOWN<br />
                 <span style={{ color: 'var(--gold)' }}>DINNER.</span>
               </h1>
+              <div className="lg:hidden mb-6 grid grid-cols-2 gap-2">
+                {[
+                  { src: '/sitdown/beet-carpaccio.jpeg', alt: 'Beet Carpaccio' },
+                  { src: '/sitdown/scallop.jpeg', alt: 'Scallop' },
+                  { src: '/sitdown/beef.jpeg', alt: 'Beef' },
+                  { src: '/sitdown/small-black-cod.jpeg', alt: 'Black Cod' },
+                ].map(img => (
+                  <div key={img.alt} style={{ overflow: 'hidden', aspectRatio: '4/3' }}>
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full"
+                      style={{ objectFit: 'cover', display: 'block' }}
+                    />
+                  </div>
+                ))}
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
                   href="/contact"
@@ -170,17 +187,6 @@ export default function SitDownPage() {
                 >
                   Book Now
                 </Link>
-                <a
-                  href="https://dmcatering.ca/wp-content/uploads/2020/01/DMC-2019-SIt-Down-Dinner.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hidden lg:block font-display text-sm tracking-[0.2em] uppercase px-8 py-4 text-center"
-                  style={{ border: '1px solid rgba(0,0,0,0.2)', color: '#1a1a1a', textDecoration: 'none' }}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--gold)'; e.currentTarget.style.color = 'var(--gold)' }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(0,0,0,0.2)'; e.currentTarget.style.color = '#1a1a1a' }}
-                >
-                  Download PDF ↓
-                </a>
               </div>
             </div>
             <div className="mt-0">
@@ -194,7 +200,7 @@ export default function SitDownPage() {
                 href="https://dmcatering.ca/wp-content/uploads/2020/01/DMC-2019-SIt-Down-Dinner.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="lg:hidden font-display text-sm tracking-[0.2em] uppercase px-8 py-4 text-center block mt-5"
+                className="font-display text-sm tracking-[0.2em] uppercase block w-full text-center py-4 mt-6 sm:inline-block sm:w-auto sm:px-8"
                 style={{ border: '1px solid rgba(0,0,0,0.2)', color: '#1a1a1a', textDecoration: 'none' }}
               >
                 Download PDF ↓
@@ -207,7 +213,7 @@ export default function SitDownPage() {
       </div>
 
       {/* Photo strip */}
-      <div className="grid grid-cols-4" style={{ background: '#1a1a1a' }}>
+      <div className="hidden lg:grid grid-cols-4" style={{ background: '#1a1a1a' }}>
         {[
           { src: '/sitdown/beet-carpaccio.jpeg', alt: 'Beet Carpaccio' },
           { src: '/sitdown/scallop.jpeg', alt: 'Scallop' },

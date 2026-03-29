@@ -177,6 +177,23 @@ export default function StationsPage() {
                 FOOD<br />
                 <span style={{ color: 'var(--gold)' }}>STATIONS.</span>
               </h1>
+              <div className="lg:hidden mb-6 grid grid-cols-2 gap-2">
+                {[
+                  { src: '/stations/stations1.jpg', alt: 'Stations' },
+                  { src: '/stations/scallops.jpg', alt: 'Scallops' },
+                  { src: '/stations/sweet-and-spicy-chicken.jpg', alt: 'Sweet and Spicy Chicken' },
+                  { src: '/stations/dessert.jpg', alt: 'Dessert' },
+                ].map(img => (
+                  <div key={img.alt} style={{ overflow: 'hidden', aspectRatio: '4/3' }}>
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full"
+                      style={{ objectFit: 'cover', display: 'block' }}
+                    />
+                  </div>
+                ))}
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
                   href="/contact"
@@ -215,7 +232,7 @@ export default function StationsPage() {
       </div>
 
       {/* Photo strip */}
-      <div className="grid grid-cols-4" style={{ background: '#1a1a1a' }}>
+      <div className="hidden lg:grid grid-cols-4" style={{ background: '#1a1a1a' }}>
         {[
           { src: '/stations/stations1.jpg', alt: 'Stations' },
           { src: '/stations/scallops.jpg', alt: 'Scallops' },
