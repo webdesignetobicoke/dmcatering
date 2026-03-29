@@ -72,7 +72,7 @@ export default function HorsDoeuvresPage() {
                 <span style={{ color: 'var(--gold)' }}>D'OEUVRES.</span>
               </h1>
               <div className="lg:hidden mb-6">
-                <div style={{ overflow: 'hidden', borderRadius: '8px', aspectRatio: '4/3' }}>
+                <div style={{ overflow: 'hidden', aspectRatio: '4/3' }}>
                   <img
                     src="/hors-doeuvres/duck.jpeg"
                     alt="Hors d'oeuvres"
